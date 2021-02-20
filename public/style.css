@@ -1,0 +1,12 @@
+img{
+    height: 4.5em;
+    padding: 10px;
+}
+.company{
+    font-size: 2.5em;
+    color:#27b7c1 ;
+}
+header{
+    display: flex;
+    align-items: center;
+}
