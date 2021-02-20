@@ -4,11 +4,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Travel Website</title>
+    <link rel="stylesheet" type="text/css" href="public/reset.css" />
+    <link rel="stylesheet" type="text/css" href="public/style.css" />
 </head>
 <body>
     <header>
-        <img class="logo" src="https://content.codecademy.com/courses/intermediate-javascript-requests/wanderlust/logo.svg" alt="logo" />
+        <img class="logo" src="/images/logo.png" alt="logo" />
+        <span class="company">Travel Junkies</span>
       </header>
+      <section id="banner">
+        <h1>Where do you want to land?</h1>
+        <form autocomplete="off">
+          <input type="text" id="city">
+          <button id="button" type="submit">Submit</button>
+        </form>
+      </section>
+      <div class="overlay"></div>
+      <div class="container">
+          <div id="destination">
+
+          </div>
+          <div class="sectiontitle">
+            <h2>CURRENT WEATHER</h2>
+          </div>
+          <section id="weather">
+
+            <div class="weather" id="weather1">
+    
+            </div>
+    
+        </section>
+        <div class="sectiontitle">
+            <h2>TOP ATTRACTIONS</h2>
+          </div>
+          <section id="venues">
+            <div class="venue" id="venue1">
+      
+            </div>
+            <div class="venue" id="venue2">
+      
+            </div>
+            <div class="venue" id="venue3">
+      
+            </div>
+          </section>
+      </div>
 </body>
 </html>
