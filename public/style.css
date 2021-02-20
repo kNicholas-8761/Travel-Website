@@ -73,3 +73,15 @@ form {
     text-align: left;
     color: #27b7c1;
   }
+  .sectiontitle {
+    width: 300px;
+    align-items: center;
+  }
+  .sectiontitle h2 {
+    font-family: Montserrat;
+    font-size: 22px;
+    font-weight: 300;
+    letter-spacing: 3.4px;
+    text-align: left;
+    color: #4a4a4a;
+  }
