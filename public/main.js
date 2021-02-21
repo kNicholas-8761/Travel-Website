@@ -38,7 +38,7 @@ const getVenues = async () => {
 
 const getForecast = async () => {
   try {
-    
+    const urlToFetch = `${weatherUrl}?&q=${$input.val()}&APPID=${openWeatherKey}`;
   } catch (error) {
     console.log(error);
   }
