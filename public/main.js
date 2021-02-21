@@ -1,6 +1,6 @@
 // Foursquare API Info
-const clientId = 'ZUQT4GLKGABQVEYH53PB0NO5VJXP4DXCWMGDNTZZHO3LNWT1';
-const clientSecret =' HQEFIZ113VS35OOZVFL0SQYDKBDWP4LAPJPKJOJWWPJUPVPP'
+const clientId ='ZUQT4GLKGABQVEYH53PB0NO5VJXP4DXCWMGDNTZZHO3LNWT1';
+const clientSecret ='HQEFIZ113VS35OOZVFL0SQYDKBDWP4LAPJPKJOJWWPJUPVPP'
 const url = 'https://api.foursquare.com/v2/venues/explore?near=';
 
 // OpenWeather Info
@@ -21,9 +21,15 @@ const weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Frida
 
 const getVenues = async () => {
   const city = $input.val();
-  const urlToFetch = `${url}${city}&limit=10&client_id =${clientId}&client_secret=${clientSecret}&v=20210221`;
+  const urlToFetch = `${url}${city}&limit=10&client_id=${clientId}&client_secret=${clientSecret}&v=20210221`;
   try {
     const response = await fetch(urlToFetch);
+    if( response.ok){
+     const jsonResponse = await response.json();
+     console.log(jsonResponse);
+     const venues = jsonResponse.groups[0].items;
+}
+
   } catch (error) {
     console.log(error);
   }
