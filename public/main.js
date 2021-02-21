@@ -27,17 +27,21 @@ const getVenues = async () => {
     if( response.ok){
      const jsonResponse = await response.json();
      const venues = jsonResponse.response.groups[0].items.map(item => item.venue);
+     console.log(venues);
      return venues
-
 }
-
-  } catch (error) {
+} catch (error) {
     console.log(error);
   }
 
 }
 
-const getForecast = () => {
+const getForecast = async () => {
+  try {
+    
+  } catch (error) {
+    console.log(error);
+  }
 
 }
 
