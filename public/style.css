@@ -4,7 +4,7 @@
 }
 .company {
   font-size: 2.5em;
-  color: #27b7c1;
+  color: #01bdd0;
 }
 header {
   display: flex;
@@ -24,8 +24,8 @@ form {
   height: 100px;
 }
 h1 {
+  font-family: 'Gloria Hallelujah', cursive;
   padding-top: 150px;
-  font-family: Montserrat;
   font-size: 64px;
   font-weight: 300;
   letter-spacing: 1.1px;
@@ -90,6 +90,7 @@ footer {
   letter-spacing: 0.5px;
   text-align: center;
   color: #ffffff;
+  border-radius: 6%;
 }
 
 .container {
@@ -97,6 +98,11 @@ footer {
   margin: auto;
   visibility: hidden;
   height: 700px;
+}
+.background{
+  /* background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%); */
+  background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 }
 #destination {
   font-family: Montserrat;
