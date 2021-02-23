@@ -92,8 +92,20 @@ footer {
   color: #ffffff;
   border-radius: 6%;
 }
+.result{
+  display: flex;
+  justify-content: center;
+}
+.result-text{
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 2em;
+  color: #01bdd0;
+  position: absolute;
+  top: 20em
+}
 
 .container {
+  position: relative;
   max-width: 900px;
   margin: auto;
   visibility: hidden;

@@ -12,6 +12,7 @@ const $input = $('#city');
 const $submit = $('#button');
 const $destination = $('#destination');
 const $container = $('.container');
+const $result = $('.result');
 const $venueDivs = [$("#venue1"), $("#venue2"), $("#venue3"), $("#venue4")];
 const $weatherDiv = $("#weather1");
 const weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
@@ -74,6 +75,7 @@ const executeSearch = () => {
   $venueDivs.forEach(venue => venue.empty());
   $weatherDiv.empty();
   $destination.empty();
+  $result.css("display", "none")
   $container.css("visibility", "visible");
   getVenues().then(venues => renderVenues(venues))
   getForecast().then(forcast =>renderForecast(forcast))

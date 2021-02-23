@@ -9,6 +9,8 @@
     <link rel="stylesheet" type="text/css" href="public/reset.css" />
     <link rel="stylesheet" type="text/css" href="public/style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&display=swap" rel="stylesheet">
 </head>
 <body class="background">
     <header>
@@ -19,13 +21,15 @@
         <h1>Where do you want to land?</h1>
         <form autocomplete="off">
           <input type="text" id="city">
-          <button id="button" type="submit">Submit</button>
+         <href href="#button"><button id="button" type="submit">Submit</button></href>
         </form>
       </section>
       <div class="overlay"></div>
+      <div class="result">
+        <p class="result-text">Your results will be shown here</p>
+      </div>
       <div class="container ">
-          <div id="destination">
-
+          <div id="destination">  
           </div>
           <div class="sectiontitle">
             <h2>CURRENT WEATHER</h2>
@@ -50,11 +54,12 @@
             <div class="venue" id="venue3">
       
             </div>
-            <footer>
-            </footer>
+            
           </section>
-      </div>
-      <script
+          <footer>
+          </footer>
+        </div>
+          <script
       src="https://code.jquery.com/jquery-3.2.1.min.js"
       integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
       crossorigin="anonymous"></script>
