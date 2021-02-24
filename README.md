@@ -12,3 +12,5 @@ Using [Foursquare API](https://developer.foursquare.com/)  and [OpenWeather API]
 * CSS3
 * BOOTSTRAP
 * JQuery
+
+Licensed under the [MIT License](LICENSE).
