@@ -16,26 +16,29 @@ const $result = $('.result');
 const $venueDivs = [$("#venue1"), $("#venue2"), $("#venue3"), $("#venue4")];
 const $weatherDiv = $("#weather1");
 const weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+const $validate = $('#validate');
 
 
 
 
 const getVenues = async () => {
   const city = $input.val();
-  const urlToFetch = `${url}${city}&limit=10&client_id=${clientId}&client_secret=${clientSecret}&v=20210221`;
-  try {
-    const response = await fetch(urlToFetch);
-    if( response.ok){
-     const jsonResponse = await response.json();
-     const venues = jsonResponse.response.groups[0].items.map(item => item.venue);
-     console.log(venues);
-     return venues
-}
-} catch (error) {
-    console.log(error);
+const urlToFetch = `${url}${city}&limit=10&client_id=${clientId}&client_secret=${clientSecret}&v=20210221`;
+    try {
+      const response = await fetch(urlToFetch);
+      if( response.ok){
+       const jsonResponse = await response.json();
+       const venues = jsonResponse.response.groups[0].items.map(item => item.venue);
+       console.log(venues);
+       return venues
+  }
+  } catch (error) {
+      console.log(error);
+    }
   }
 
-}
+
+
 
 const getForecast = async () => {
   try {
@@ -71,15 +74,25 @@ const renderForecast = (day) => {
   $weatherDiv.append(weatherContent);
 }
 
-const executeSearch = () => {
-  $venueDivs.forEach(venue => venue.empty());
-  $weatherDiv.empty();
-  $destination.empty();
-  $result.css("display", "none")
-  $container.css("visibility", "visible");
-  getVenues().then(venues => renderVenues(venues))
-  getForecast().then(forcast =>renderForecast(forcast))
-  return false;
-}
+const city = document.getElementById('city')
+
+const executeSearch = (event) => {
+  event.preventDefault()
+  if(city.value.length <= 0){
+    city.classList.add("is-invalid")
+  }else{
+    city.classList.remove("is-invalid")
+    $venueDivs.forEach(venue => venue.empty());
+    $weatherDiv.empty();
+    $destination.empty();
+    $result.css("display", "none")
+    $container.css("display", "block");
+    getVenues().then(venues => renderVenues(venues))
+    getForecast().then(forcast =>renderForecast(forcast))
+
+    return false;
+  }
+ 
+  }
 
 $submit.click(executeSearch)
